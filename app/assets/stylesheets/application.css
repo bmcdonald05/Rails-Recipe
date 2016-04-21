@@ -3,3 +3,10 @@
  *= require_self
  */
 
+ .cant-see-me {
+   display: none;
+ }
+
+ .container {
+    background: rgba(255, 255, 255, 0.7);
+  }
