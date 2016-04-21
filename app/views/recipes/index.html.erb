@@ -3,26 +3,34 @@
 <h1>Recipes</h1>
 
 
-<h2>Name
-Ingredients
-Instructions
-Rating</h2>
-
-
-<% @recipes.each do |recipe| %>
-
-    <%= recipe.name %>
-    <%= recipe.ingredients %>
-    <%= recipe.instructions %>
-    <%= recipe.rating %>
-    <%= link_to 'Show', recipe %>
-    <%= link_to 'Edit', edit_recipe_path(recipe) %>
-    <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
-
-<br>
-
 <%= link_to 'New Recipe', new_recipe_path %>
 
 
-    
+
+<div class="row">
+    <% @recipes.each do |recipe| %>
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel panel-heading">
+            <h3> <%= link_to recipe.name, recipe, {:style=>'color:#FFFFFF;', :class => "css_class"} %></h3>
+          </div>
+        <div class="well">
+          <p> <h4><strong> Ingredients:</strong></h4> <%= recipe.ingredients %> </p>
+          <p> <h4><strong> Instructions:</strong></h4> <%= truncate(recipe.instructions, length: 250, separator: " ") %> <br /> [<%= link_to 'Read More', recipe %>] </p>
+          <strong>Rating:</strong>
+            <% "#{recipe.rating}".to_i.times do |rank| %>
+            <span class="glyphicon glyphicon-star"></span>
+          <% end %>
+
+          <div class="panel-footer">
+            <%= link_to 'Edit', edit_recipe_path(recipe), class: "btn btn-warning" %>
+            <%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+
+
