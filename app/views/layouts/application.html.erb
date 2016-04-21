@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Food</title>
+<<<<<<< HEAD
   <meta charset="utf=8"
   <meta http=equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,5 +23,21 @@
     <%= yield %>
 </div>
 
+=======
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" %>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+	<%= yield %>
+</div class="container">
+>>>>>>> 85e548365460cae036ca7c2cae211119cce2c754
 </body>
 </html>
