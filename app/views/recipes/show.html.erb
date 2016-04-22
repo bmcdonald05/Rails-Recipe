@@ -7,7 +7,7 @@
 </div>
 
 <% if @recipe.avatar_file_name != nil %>
-   <%= image_tag recipe.avatar.url(:medium), class: "img-responsive" %>
+   <%= image_tag @recipe.avatar.url(:medium), class: "img-responsive" %>
 <% end %>
 
 <div class="panel panel-primary">
