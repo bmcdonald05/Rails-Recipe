@@ -10,3 +10,8 @@
  .container {
     background: rgba(255, 255, 255, 0.7);
   }
+
+  body {
+  background: url("recipe_image.jpeg") no-repeat;
+  background-size: cover;
+}
